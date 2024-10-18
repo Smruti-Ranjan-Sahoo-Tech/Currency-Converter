@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currerncy Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Currerncy Converter</h1>
+            <span class="menu-icon" onclick="toggleMenu()"> &#9776;</span>
+        </nav>
+    </header>
+    <main>
+        <div class="leftContaner">
+            <h1>Multi-Currency Conversion</h1>
+            <ul id="list">
+                
+            </ul>
+        </div>
+        <div class="contaner">
+            <div class="inputSection"">
+            <p>Enter Amount</p>
+            <input min="0" id="input" value="1" type="number">
+            </div>
+            <div class="FromTo">
+                <div class="FT from">
+                    <p>From</p>
+                    <div class="imgSelFrom">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="gff">
+                        <select name="FromSelect" id=""></select>
+                    </div>
+                </div>
+                <button id="swap"><img src="swap.png" alt="img"></button>
+                <div class="FT to">
+                    <p>To</p>
+                    <div class="imgSelTo">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="gff">
+                        <select name="ToSelect" id=""></select>
+                    </div>
+                </div>
+            </div>
+            <div class="btnMsg">
+                <button id="cheak">Cheak</button>
+                <div id="msg">1USD=80INR</div>
+            </div>
+        </div>
+    </main>
+    <script src="code.js"></script>
+    <script src="script.js"></script>
+    <footer>
+       <p> &copy;Smruti Ranjan Sahoo</p>
+    </footer>
+</body>
+</html>
