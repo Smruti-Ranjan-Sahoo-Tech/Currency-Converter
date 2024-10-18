@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+}
+
+body {
+  background-color: rgba(239, 214, 183, 0.683);
+  height: 100vh;
+  max-height: 100vh;
+}
+
+nav {
+  max-height: 50px;
+  background-color: rgb(0, 107, 128);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 10px black;
+  padding: 0.7rem 1rem;
+}
+
+nav span {
+  cursor: pointer;
+}
+
+nav h1 {
+  letter-spacing: 2px;
+  color: aqua;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5%;
+  padding-top: 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#list {
+  padding: 1rem;
+}
+
+#list li {
+  list-style: none;
+  padding-left: 1.2rem;
+  padding-top: 5px;
+}
+
+.leftContaner {
+  background-color: white;
+  margin-top: 1rem solid black;
+  max-height: 40rem;
+  height: 40rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px black;
+  position: relative;
+  top: 5%;
+  left: -100%;
+  /* Fully off-screen */
+  transition: left .4s ease-in-out;
+  /* Added duration */
+  overflow: auto;
+  scrollbar-width: thin;
+  /* display: none; */
+
+}
+
+.leftContaner h1 {
+  font-size: 1.4rem;
+  position: sticky;
+  top: 0;
+  background-color: aquamarine;
+  border-radius: 10px 10px 0em 0em;
+  padding: 1rem;
+  box-shadow: 0px 0px 13px 0px gray;
+}
+
+.leftContaner.toggle {
+  display: inline;
+  left: 0%;
+  /* Slides into view */
+  transition: left .4s ease-in-out;
+}
+
+
+.contaner {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  height: 70%;
+  background-color: white;
+  position: relative;
+  top: 5%;
+  right: 27%;
+  box-shadow: 0px 0px 19px 0.1px;
+  border-radius: 15px;
+  transition: right 0.3s ease-in-out; 
+}
+
+.contaner.toggleCont {
+  right: 15%;
+  box-shadow: 0px 0px 5px 0px black;
+  transition: right 0.3s ease-in-out;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.inputSection p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.inputSection #input {
+  height: 25px;
+  outline: none;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.contaner .btnMsg {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.FromTo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+
+}
+
+.FromTo img {
+  /* width: 40px; */
+  height: 29px;
+}
+
+.FromTo #swap {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.imgSelFrom,
+.imgSelTo {
+  border: 1px solid gray;
+  padding: 5px;
+  gap: 9px;
+  border-radius: 10px;
+}
+
+#cheak {
+  height: 2rem;
+  width: 15rem;
+  border-radius: 18px;
+  background-color: rgba(38, 180, 211, 0.646);
+  border: 1px solid black;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(55, 0, 255, 0.829);
+}
+
+#cheak:hover {
+  box-shadow: 0px 0px 7px 0px black;
+  cursor: pointer;
+}
+
+#msg {
+  color: brown;
+  text-align: center;
+  font-weight: bolder;
+}
+
+footer {
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+  height: 2rem;
+  bottom: -2%;
+  width: 100%;
+  box-shadow: 0px 0px px 0px black;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 0;
+  }
+
+
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+
+  .contaner {
+    width: 80vw;
+    right: 0%;
+    transition: none; 
+
+  }
+
+  .leftContaner {
+    width: 80vw;
+    max-height: 19rem;
+
+  }
+
+  .contaner.toggleCont {
+    left: 0%;
+    transition: all 1ms ease;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-left: 0px;
+  }
+
+  nav h1 {
+    font-size: 1rem;
+  }
+
+  .contaner {
+    width: 90vw;
+    right: 0%;
+  }
+
+  .leftContaner {
+    width: 90vw;
+  }
+
+  .inputSection {
+    padding: 10%;
+  }
+
+  #cheak {
+    width: 12rem;
+    font-size: 0.9rem;
+  }
+
+  .leftContaner {
+    width: 80vw;
+    max-height: 30rem;
+  }
+}
